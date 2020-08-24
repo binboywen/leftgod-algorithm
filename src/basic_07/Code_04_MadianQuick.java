@@ -1,6 +1,6 @@
 package basic_07;
 
-import java.util.Arrays;
+import java.util.*;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
@@ -8,7 +8,7 @@ public class Code_04_MadianQuick {
 
 	public static class MedianHolder {
 		private PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(new MaxHeapComparator());
-		private PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>(new MinHeapComparator());
+		private PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();
 
 		private void modifyTwoHeapsSize() {
 			if (this.maxHeap.size() == this.minHeap.size() + 2) {
@@ -18,6 +18,9 @@ public class Code_04_MadianQuick {
 				this.maxHeap.add(this.minHeap.poll());
 			}
 		}
+
+
+
 
 		public void addNumber(int num) {
 			if (this.maxHeap.isEmpty()) {

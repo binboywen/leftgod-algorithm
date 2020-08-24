@@ -7,9 +7,19 @@ public class Test {
 		}while (m-- >= 10);
 	}
 
-	public static void main(String[] args) {
-		int i = 10;
-		Test t = new Test();
-		t.printValue(i);
+	public static void main(String[] args) {//2
+		System.out.println("value="+switchit(4));//3
+	}//4
+	public static int switchit(int x) {
+		int j=1;
+		switch (x) {
+			case 1:j++;
+			case 2:j++;
+			case 3:j++;
+			case 4:j++;
+			case 5:j++;
+			default:j++;
+		}
+		return j+x;
 	}
 }
