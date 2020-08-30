@@ -15,8 +15,8 @@ public class Code_04_QuickSort {
         if (l < r) {
             swap(arr, l + (int) (Math.random() * (r - l + 1)), r);
             int[] p = partition(arr, l, r);
-            quickSort(arr, l, p[0] - 1);
-            quickSort(arr, p[1] + 1, r);
+            quickSort(arr, l, p[0]);
+            quickSort(arr, p[1], r);
         }
     }
 
@@ -33,7 +33,7 @@ public class Code_04_QuickSort {
             }
         }
         swap(arr, more, r);
-        return new int[]{less + 1, more};
+        return new int[]{less , more + 1};
     }
 
     public static void swap(int[] arr, int i, int j) {
